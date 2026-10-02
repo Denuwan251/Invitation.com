@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kasun & Amanda | Wedding Invitation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND MUSIC
+    ====================================================== -->
+
+    <audio id="weddingMusic" loop>
+        <source src="music/wedding.mp3" type="audio/mpeg">
+    </audio>
+
+    <button
+        class="music-button"
+        id="musicButton"
+        type="button"
+        onclick="toggleMusic()">
+
+        ♪ MUSIC
+
+    </button>
+
+
+
+    <!-- =====================================================
+         OPENING SCREEN
+    ====================================================== -->
+
+    <div class="opening" id="openingScreen">
+
+        <div class="opening-content">
+
+            <p>YOU ARE CORDIALLY INVITED</p>
+
+            <h2>
+                Kasun & Amanda
+            </h2>
+
+            <span>
+                25 • 12 • 2026
+            </span>
+
+            <button
+                type="button"
+                onclick="openInvitation()">
+
+                OPEN INVITATION
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-text">
+                TOGETHER WITH THEIR FAMILIES
+            </p>
+
+
+            <h1>
+
+                Kasun
+
+                <span>&</span>
+
+                Amanda
+
+            </h1>
+
+
+            <p class="invite-text">
+
+                REQUEST THE PLEASURE OF YOUR COMPANY
+
+                <br>
+
+                AT THEIR WEDDING CELEBRATION
+
+            </p>
+
+
+
+            <!-- COUPLE PHOTO -->
+
+            <div class="couple-photo">
+
+                <img
+                    src="images/couple.jpg"
+                    alt="Kasun and Amanda">
+
+            </div>
+
+
+
+            <!-- DATE -->
+
+            <div class="wedding-date">
+
+                <span>
+                    25
+                </span>
+
+                <div>
+
+                    <p>
+                        DECEMBER
+                    </p>
+
+                    <p>
+                        2026
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <p class="venue">
+
+                GRAND BALLROOM • COLOMBO
+
+            </p>
+
+
+
+            <a
+                href="#details"
+                class="button">
+
+                VIEW INVITATION
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COUNTDOWN
+    ====================================================== -->
+
+    <section class="countdown-section reveal">
+
+        <p>
+            COUNTING DOWN TO OUR SPECIAL DAY
+        </p>
+
+        <h2>
+            The Big Day
+        </h2>
+
+
+        <div class="countdown">
+
+            <div>
+
+                <span id="days">
+                    00
+                </span>
+
+                <small>
+                    DAYS
+                </small>
+
+            </div>
+
+
+            <div>
+
+                <span id="hours">
+                    00
+                </span>
+
+                <small>
+                    HOURS
+                </small>
+
+            </div>
+
+
+            <div>
+
+                <span id="minutes">
+                    00
+                </span>
+
+                <small>
+                    MINUTES
+                </small>
+
+            </div>
+
+
+            <div>
+
+                <span id="seconds">
+                    00
+                </span>
+
+                <small>
+                    SECONDS
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OUR STORY
+    ====================================================== -->
+
+    <section class="story reveal">
+
+        <div class="story-content">
+
+            <p class="section-label">
+                OUR STORY
+            </p>
+
+
+            <h2>
+
+                Two lives,
+
+                <br>
+
+                <span>
+                    one beautiful journey.
+                </span>
+
+            </h2>
+
+
+            <p class="story-text">
+
+                What started as a simple meeting
+                became a beautiful journey filled
+                with laughter, memories and love.
+
+                <br><br>
+
+                Today, we are excited to begin
+                the next chapter of our story together.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="story-image">
+
+            <img
+                src="images/story.jpg"
+                alt="Our Story">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PHOTO GALLERY
+    ====================================================== -->
+
+    <section class="gallery reveal">
+
+        <div class="gallery-heading">
+
+            <p class="section-label">
+                OUR MEMORIES
+            </p>
+
+
+            <h2>
+
+                Moments
+
+                <span>
+                    to remember.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item large">
+
+                <img
+                    src="images/memory1.jpg"
+                    alt="Wedding Memory">
+
+            </div>
+
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/memory2.jpg"
+                    alt="Wedding Memory">
+
+            </div>
+
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/couple.jpg"
+                    alt="Couple">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SPECIAL DAY / DETAILS
+    ====================================================== -->
+
+    <section
+        class="details reveal"
+        id="details">
+
+
+        <p class="section-label">
+            OUR SPECIAL DAY
+        </p>
+
+
+        <h2>
+
+            A Celebration
+
+            <br>
+
+            <span>
+                of Love
+            </span>
+
+        </h2>
+
+
+        <p class="description">
+
+            We are delighted to invite you
+            to share our special day with us
+            as we begin this beautiful journey
+            together.
+
+        </p>
+
+
+
+        <!-- EVENT INFORMATION -->
+
+        <div class="event-info">
+
+
+            <div class="info-box">
+
+                <h3>
+                    CEREMONY
+                </h3>
+
+                <p>
+                    10:00 AM
+                </p>
+
+                <p>
+                    Friday, 25 December 2026
+                </p>
+
+            </div>
+
+
+
+            <div class="vertical-line"></div>
+
+
+
+            <div class="info-box">
+
+                <h3>
+                    RECEPTION
+                </h3>
+
+                <p>
+                    6:30 PM
+                </p>
+
+                <p>
+                    Grand Ballroom, Colombo
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- LOCATION -->
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=Colombo"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button dark">
+
+            VIEW LOCATION
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RSVP
+    ====================================================== -->
+
+    <section class="rsvp reveal">
+
+        <div class="rsvp-content">
+
+
+            <p class="section-label">
+
+                WE WOULD LOVE TO HAVE YOU
+
+            </p>
+
+
+
+            <h2>
+
+                Will you
+
+                <br>
+
+                <span>
+                    join us?
+                </span>
+
+            </h2>
+
+
+
+            <p class="rsvp-text">
+
+                Your presence would make our special
+                day even more meaningful.
+
+            </p>
+
+
+
+            <a
+                href="https://wa.me/94742848081?text=Hi%20Kasun%20%26%20Amanda!%20I%20would%20love%20to%20attend%20your%20wedding%20on%2025%20December%202026."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rsvp-button">
+
+                CONFIRM ATTENDANCE
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+            KASUN & AMANDA
+        </p>
+
+        <span>
+            25 • 12 • 2026
+        </span>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           OPEN INVITATION
+        ====================================================== */
+
+        function openInvitation() {
+
+            const opening =
+                document.getElementById("openingScreen");
+
+
+            if (!opening) {
+                return;
+            }
+
+
+            opening.classList.add("hide");
+
+
+            /*
+             * Fallback:
+             * Even if .opening.hide is missing
+             * from CSS, the opening screen will disappear.
+             */
+
+            opening.style.opacity = "0";
+
+            opening.style.visibility = "hidden";
+
+            opening.style.pointerEvents = "none";
+
+        }
+
+
+
+        /* =====================================================
+           MUSIC
+        ====================================================== */
+
+        const music =
+            document.getElementById("weddingMusic");
+
+        const musicButton =
+            document.getElementById("musicButton");
+
+
+        function toggleMusic() {
+
+            if (!music) {
+                return;
+            }
+
+
+            if (music.paused) {
+
+
+                music.play()
+                    .then(function () {
+
+                        if (musicButton) {
+
+                            musicButton.innerText =
+                                "Ⅱ MUSIC";
+
+                        }
+
+                    })
+                    .catch(function (error) {
+
+                        console.log(
+                            "Music playback was blocked:",
+                            error
+                        );
+
+                    });
+
+
+            } else {
+
+
+                music.pause();
+
+
+                if (musicButton) {
+
+                    musicButton.innerText =
+                        "♪ MUSIC";
+
+                }
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           COUNTDOWN
+        ====================================================== */
+
+        const weddingDate =
+            new Date(
+                "December 25, 2026 10:00:00"
+            ).getTime();
+
+
+
+        function updateCountdown() {
+
+
+            const now =
+                new Date().getTime();
+
+
+            const distance =
+                weddingDate - now;
+
+
+
+            const daysElement =
+                document.getElementById("days");
+
+            const hoursElement =
+                document.getElementById("hours");
+
+            const minutesElement =
+                document.getElementById("minutes");
+
+            const secondsElement =
+                document.getElementById("seconds");
+
+
+
+            /*
+             * Safety check
+             */
+
+            if (
+                !daysElement ||
+                !hoursElement ||
+                !minutesElement ||
+                !secondsElement
+            ) {
+
+                return;
+
+            }
+
+
+
+            /*
+             * Wedding date reached
+             */
+
+            if (distance <= 0) {
+
+                daysElement.innerText = "00";
+
+                hoursElement.innerText = "00";
+
+                minutesElement.innerText = "00";
+
+                secondsElement.innerText = "00";
+
+                return;
+
+            }
+
+
+
+            const days =
+                Math.floor(
+                    distance /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            const hours =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60 * 60 * 24)
+                    ) /
+                    (1000 * 60 * 60)
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60 * 60)
+                    ) /
+                    (1000 * 60)
+                );
+
+
+            const seconds =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60)
+                    ) /
+                    1000
+                );
+
+
+
+            daysElement.innerText =
+                String(days).padStart(2, "0");
+
+
+            hoursElement.innerText =
+                String(hours).padStart(2, "0");
+
+
+            minutesElement.innerText =
+                String(minutes).padStart(2, "0");
+
+
+            secondsElement.innerText =
+                String(seconds).padStart(2, "0");
+
+        }
+
+
+
+        /*
+         * Run immediately
+         */
+
+        updateCountdown();
+
+
+
+        /*
+         * Update every second
+         */
+
+        setInterval(
+            updateCountdown,
+            1000
+        );
+
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ====================================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+
+        if (
+            "IntersectionObserver"
+            in window
+        ) {
+
+
+            const revealObserver =
+                new IntersectionObserver(
+
+                    function (entries) {
+
+
+                        entries.forEach(
+                            function (entry) {
+
+
+                                if (
+                                    entry.isIntersecting
+                                ) {
+
+
+                                    entry.target.classList.add(
+                                        "show"
+                                    );
+
+
+                                    /*
+                                     * Stop observing after
+                                     * the animation happens.
+                                     */
+
+                                    revealObserver.unobserve(
+                                        entry.target
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    },
+
+                    {
+                        threshold: 0.15
+                    }
+
+                );
+
+
+
+            revealElements.forEach(
+                function (element) {
+
+                    revealObserver.observe(
+                        element
+                    );
+
+                }
+            );
+
+
+        } else {
+
+
+            /*
+             * Fallback for old browsers
+             */
+
+            revealElements.forEach(
+                function (element) {
+
+                    element.classList.add(
+                        "show"
+                    );
+
+                }
+            );
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

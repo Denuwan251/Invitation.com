@@ -1,0 +1,731 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5efe8;
+    color: #403934;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-weight: 300;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   OPENING
+========================= */
+
+.opening {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #eee0d5 0%,
+            #d9c4b3 55%,
+            #bfa28e 100%
+        );
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+}
+
+.opening.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.opening-content {
+    padding: 30px;
+
+    animation: openingFade 1.2s ease;
+}
+
+.opening-small {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #756256;
+
+    margin-bottom: 30px;
+}
+
+.opening h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 11vw, 120px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    color: #463a33;
+}
+
+.opening-title {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #756256;
+}
+
+.opening-line {
+    width: 90px;
+    height: 1px;
+
+    background: #8c6f5b;
+
+    margin: 25px auto;
+}
+
+.opening-date {
+    margin-top: 18px;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #756256;
+}
+
+.opening button {
+    margin-top: 35px;
+
+    padding: 15px 30px;
+
+    border: 1px solid #806451;
+
+    background: transparent;
+
+    color: #463a33;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    transition: 0.4s ease;
+}
+
+.opening button:hover {
+    background: #463a33;
+    color: #f5efe8;
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-btn {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 1000;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid #9d806c;
+
+    background: rgba(245, 239, 232, 0.9);
+
+    color: #806451;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    backdrop-filter: blur(8px);
+
+    transition: 0.3s ease;
+}
+
+.music-btn:hover,
+.music-btn.playing {
+    background: #806451;
+    color: #f5efe8;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(60, 43, 34, 0.18),
+            rgba(60, 43, 34, 0.62)
+        ),
+        url("images/couple.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            transparent 10%,
+            rgba(45, 31, 25, 0.5) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 30px;
+
+    color: #fffaf5;
+
+    animation: heroFade 2s ease;
+}
+
+.hero-small {
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(70px, 13vw, 150px);
+
+    font-weight: 500;
+
+    line-height: 0.88;
+
+    text-shadow: 0 5px 30px rgba(0,0,0,0.35);
+}
+
+.hero-line {
+    width: 80px;
+    height: 1px;
+
+    background: #ead5c4;
+
+    margin: 30px auto;
+}
+
+.hero-subtitle {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+}
+
+.hero-date,
+.hero-location {
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 120px 30px;
+}
+
+.section-label {
+    color: #92725f;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.section h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color: #443a34;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section {
+    text-align: center;
+}
+
+.countdown {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 50px;
+}
+
+.time-box {
+    padding: 35px 15px;
+
+    background: #eee4dc;
+
+    border: 1px solid rgba(128, 100, 81, 0.2);
+}
+
+.time-box span {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 55px;
+
+    color: #51443c;
+}
+
+.time-box small {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #92725f;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.story-image img {
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+}
+
+.story-content p:not(.section-label) {
+    margin-top: 25px;
+
+    color: #6d625b;
+
+    max-width: 550px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: 1.2fr 1fr;
+
+    grid-template-rows: 300px 300px;
+
+    gap: 15px;
+
+    margin-top: 50px;
+}
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item.large {
+    grid-row: span 2;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.details {
+    text-align: center;
+}
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 55px;
+}
+
+.detail-card {
+    padding: 45px 25px;
+
+    background: #eee4dc;
+
+    border: 1px solid rgba(128, 100, 81, 0.2);
+}
+
+.detail-icon {
+    color: #92725f;
+
+    font-size: 22px;
+}
+
+.detail-card h3 {
+    margin: 15px 0;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 500;
+}
+
+.detail-card p {
+    color: #6d625b;
+}
+
+.map-btn {
+    display: inline-block;
+
+    margin-top: 45px;
+
+    padding: 14px 30px;
+
+    border: 1px solid #8c6f5b;
+
+    color: #645247;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    transition: 0.3s ease;
+}
+
+.map-btn:hover {
+    background: #8c6f5b;
+
+    color: #fffaf5;
+}
+
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp {
+    text-align: center;
+
+    padding: 140px 30px;
+
+    background:
+        linear-gradient(
+            rgba(61, 42, 32, 0.72),
+            rgba(61, 42, 32, 0.84)
+        ),
+        url("images/memory2.jpg") center/cover no-repeat;
+
+    color: #fffaf5;
+}
+
+.rsvp-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.rsvp .section-label {
+    color: #e3c6b1;
+}
+
+.rsvp h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(50px, 7vw, 85px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+}
+
+.rsvp p:not(.section-label) {
+    margin-top: 20px;
+
+    color: #eadfd7;
+}
+
+.rsvp-btn {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 16px 32px;
+
+    background: #efe0d3;
+
+    color: #51443c;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    transition: 0.3s ease;
+}
+
+.rsvp-btn:hover {
+    transform: translateY(-3px);
+
+    background: #fffaf5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 60px 30px;
+
+    text-align: center;
+
+    background: #3f3028;
+
+    color: #f5eee7;
+}
+
+footer h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 38px;
+}
+
+footer p {
+    color: #d8bdab;
+
+    letter-spacing: 3px;
+
+    font-size: 10px;
+
+    margin: 8px 0 20px;
+}
+
+footer span {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #a88d7c;
+}
+
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes openingFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes heroFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .section {
+        padding: 85px 22px;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+
+        grid-template-rows:
+            280px
+            200px
+            200px;
+    }
+
+    .gallery-item.large {
+        grid-row: auto;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 78px;
+    }
+
+    .music-btn {
+        right: 18px;
+        bottom: 18px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 68px;
+    }
+
+    .hero-subtitle {
+        font-size: 26px;
+    }
+
+    .opening h1 {
+        font-size: 65px;
+    }
+
+}

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daniel & Olivia | Wedding Invitation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- OPENING SCREEN -->
+    <div class="opening" id="openingScreen">
+        <div class="opening-content">
+
+            <p>YOU ARE CORDIALLY INVITED</p>
+
+            <div class="opening-line"></div>
+
+            <h2>
+                Daniel <span>&</span> Olivia
+            </h2>
+
+            <p class="opening-date">
+                12 • 12 • 2026
+            </p>
+
+            <button type="button" onclick="openInvitation()">
+                OPEN INVITATION
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- MUSIC -->
+    <audio id="weddingMusic" loop>
+        <source src="music/wedding.mp3" type="audio/mpeg">
+    </audio>
+
+    <button
+        class="music-button"
+        id="musicButton"
+        type="button"
+        onclick="toggleMusic()">
+
+        ♪ MUSIC
+
+    </button>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content reveal">
+
+            <p class="top-text">
+                TOGETHER WITH THEIR FAMILIES
+            </p>
+
+            <div class="line"></div>
+
+            <h1>
+                Daniel
+                <span>&</span>
+                Olivia
+            </h1>
+
+            <p class="invite-text">
+                REQUEST THE PLEASURE OF YOUR COMPANY
+                <br>
+                AT THEIR WEDDING CELEBRATION
+            </p>
+
+            <div class="hero-photo">
+                <img
+                    src="images/couple.jpg"
+                    alt="Daniel and Olivia">
+            </div>
+
+            <div class="date">
+
+                <span>12</span>
+
+                <div>
+                    <p>DECEMBER</p>
+                    <p>2026</p>
+                </div>
+
+            </div>
+
+            <p class="venue">
+                THE GRAND HOTEL • COLOMBO
+            </p>
+
+            <a href="#countdown" class="button">
+                EXPLORE INVITATION
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- COUNTDOWN -->
+    <section
+        class="countdown-section reveal"
+        id="countdown">
+
+        <p class="section-label">
+            THE COUNTDOWN
+        </p>
+
+        <h2>
+            Until we say
+            <span>I do.</span>
+        </h2>
+
+        <div class="countdown">
+
+            <div class="count-box">
+                <span id="days">00</span>
+                <small>DAYS</small>
+            </div>
+
+            <div class="count-box">
+                <span id="hours">00</span>
+                <small>HOURS</small>
+            </div>
+
+            <div class="count-box">
+                <span id="minutes">00</span>
+                <small>MINUTES</small>
+            </div>
+
+            <div class="count-box">
+                <span id="seconds">00</span>
+                <small>SECONDS</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+    <section class="story reveal">
+
+        <div class="story-image">
+
+            <img
+                src="images/story.jpg"
+                alt="Daniel and Olivia">
+
+        </div>
+
+
+        <div class="story-content">
+
+            <p class="section-label">
+                OUR STORY
+            </p>
+
+            <h2>
+                Two hearts,
+                <br>
+                <span>one forever.</span>
+            </h2>
+
+            <p class="story-text">
+                Somewhere between ordinary moments,
+                laughter and unforgettable memories,
+                two lives found their way to each other.
+            </p>
+
+            <p class="story-text">
+                Now, surrounded by the people who mean
+                the most to them, Daniel and Olivia are
+                ready to begin their next chapter together.
+            </p>
+
+            <div class="small-ornament">
+                ✦
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+    <section class="gallery reveal">
+
+        <div class="gallery-heading">
+
+            <p class="section-label">
+                BEAUTIFUL MOMENTS
+            </p>
+
+            <h2>
+                Memories
+                <span>in the making.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item large">
+
+                <img
+                    src="images/memory1.jpg"
+                    alt="Wedding reception">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/memory2.jpg"
+                    alt="Wedding moment">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/memory3.jpg"
+                    alt="Wedding details">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DETAILS -->
+    <section
+        class="details reveal"
+        id="details">
+
+        <p class="section-label">
+            SAVE THE DATE
+        </p>
+
+        <h2>
+            A Celebration
+            <br>
+            <span>of Love</span>
+        </h2>
+
+        <p class="description">
+            We would be delighted to have you
+            with us as we begin this beautiful
+            journey together.
+        </p>
+
+
+        <div class="event-info">
+
+            <div class="info-box">
+
+                <span class="number">
+                    01
+                </span>
+
+                <h3>
+                    CEREMONY
+                </h3>
+
+                <p class="time">
+                    10:00 AM
+                </p>
+
+                <p>
+                    Saturday, 12 December 2026
+                </p>
+
+            </div>
+
+
+            <div class="vertical-line"></div>
+
+
+            <div class="info-box">
+
+                <span class="number">
+                    02
+                </span>
+
+                <h3>
+                    RECEPTION
+                </h3>
+
+                <p class="time">
+                    6:30 PM
+                </p>
+
+                <p>
+                    The Grand Hotel
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=The+Grand+Hotel+Colombo"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button dark">
+
+            VIEW LOCATION
+
+        </a>
+
+    </section>
+
+
+    <!-- RSVP -->
+    <section class="rsvp reveal">
+
+        <div class="rsvp-content">
+
+            <p class="section-label">
+                YOUR PRESENCE MATTERS
+            </p>
+
+            <h2>
+                Will you
+                <br>
+                <span>join us?</span>
+            </h2>
+
+            <p class="rsvp-text">
+                We would be honoured to celebrate
+                this unforgettable day with you.
+            </p>
+
+            <a
+                href="https://wa.me/94742848081?text=Hi%20Daniel%20%26%20Olivia!%20I%20would%20love%20to%20attend%20your%20wedding%20on%2012%20December%202026."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rsvp-button">
+
+                CONFIRM ATTENDANCE
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-mark">
+            D & O
+        </div>
+
+        <p>
+            DANIEL & OLIVIA
+        </p>
+
+        <span>
+            12 • 12 • 2026
+        </span>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        /* OPENING SCREEN */
+
+        function openInvitation() {
+
+            const opening =
+                document.getElementById("openingScreen");
+
+            if (!opening) return;
+
+            opening.classList.add("hide");
+
+            setTimeout(function () {
+                opening.style.display = "none";
+            }, 1200);
+        }
+
+
+        /* MUSIC */
+
+        const music =
+            document.getElementById("weddingMusic");
+
+        const musicButton =
+            document.getElementById("musicButton");
+
+
+        function toggleMusic() {
+
+            if (!music) return;
+
+            if (music.paused) {
+
+                music.play()
+                    .then(function () {
+
+                        musicButton.innerText =
+                            "Ⅱ MUSIC";
+
+                    })
+                    .catch(function (error) {
+
+                        console.log(
+                            "Music playback blocked:",
+                            error
+                        );
+
+                    });
+
+            } else {
+
+                music.pause();
+
+                musicButton.innerText =
+                    "♪ MUSIC";
+
+            }
+        }
+
+
+        /* COUNTDOWN */
+
+        const weddingDate =
+            new Date(
+                "December 12, 2026 10:00:00"
+            ).getTime();
+
+
+        function updateCountdown() {
+
+            const now =
+                new Date().getTime();
+
+            const distance =
+                weddingDate - now;
+
+
+            const days =
+                document.getElementById("days");
+
+            const hours =
+                document.getElementById("hours");
+
+            const minutes =
+                document.getElementById("minutes");
+
+            const seconds =
+                document.getElementById("seconds");
+
+
+            if (
+                !days ||
+                !hours ||
+                !minutes ||
+                !seconds
+            ) {
+                return;
+            }
+
+
+            if (distance <= 0) {
+
+                days.innerText = "00";
+                hours.innerText = "00";
+                minutes.innerText = "00";
+                seconds.innerText = "00";
+
+                return;
+            }
+
+
+            const d =
+                Math.floor(
+                    distance /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            const h =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60 * 60 * 24)
+                    ) /
+                    (1000 * 60 * 60)
+                );
+
+
+            const m =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60 * 60)
+                    ) /
+                    (1000 * 60)
+                );
+
+
+            const s =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60)
+                    ) /
+                    1000
+                );
+
+
+            days.innerText =
+                String(d).padStart(2, "0");
+
+            hours.innerText =
+                String(h).padStart(2, "0");
+
+            minutes.innerText =
+                String(m).padStart(2, "0");
+
+            seconds.innerText =
+                String(s).padStart(2, "0");
+
+        }
+
+
+        updateCountdown();
+
+        setInterval(
+            updateCountdown,
+            1000
+        );
+
+
+        /* SCROLL REVEAL */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        if ("IntersectionObserver" in window) {
+
+            const revealObserver =
+                new IntersectionObserver(
+
+                    function (entries) {
+
+                        entries.forEach(
+                            function (entry) {
+
+                                if (
+                                    entry.isIntersecting
+                                ) {
+
+                                    entry.target.classList.add(
+                                        "show"
+                                    );
+
+                                    revealObserver.unobserve(
+                                        entry.target
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    },
+
+                    {
+                        threshold: 0.12
+                    }
+
+                );
+
+
+            revealElements.forEach(
+                function (element) {
+
+                    revealObserver.observe(
+                        element
+                    );
+
+                }
+            );
+
+        } else {
+
+            revealElements.forEach(
+                function (element) {
+
+                    element.classList.add(
+                        "show"
+                    );
+
+                }
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>

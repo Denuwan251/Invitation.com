@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amelia's Birthday | Invitation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- OPENING SCREEN -->
+    <section class="opening" id="openingScreen">
+
+        <div class="opening-content">
+
+            <p class="opening-small">
+                YOU ARE INVITED TO
+            </p>
+
+            <h1>
+                Amelia's
+            </h1>
+
+            <h2>
+                Birthday Celebration
+            </h2>
+
+            <div class="opening-line"></div>
+
+            <p class="opening-date">
+                20 • 12 • 2026
+            </p>
+
+            <button onclick="openInvitation()">
+                OPEN INVITATION
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- MUSIC -->
+    <audio id="bgMusic" loop>
+        <source src="music/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" onclick="toggleMusic()" id="musicButton">
+        ♪
+    </button>
+
+
+    <!-- HERO -->
+    <header class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                COME CELEBRATE WITH ME
+            </p>
+
+            <h1>
+                Amelia
+            </h1>
+
+            <div class="hero-line"></div>
+
+            <p class="hero-subtitle">
+                Birthday Celebration
+            </p>
+
+            <p class="hero-date">
+                20 December 2026
+            </p>
+
+            <p class="hero-location">
+                The Grand Ballroom • Colombo
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- COUNTDOWN -->
+    <section class="section countdown-section reveal">
+
+        <p class="section-label">
+            THE CELEBRATION BEGINS IN
+        </p>
+
+        <h2>
+            Counting Down
+        </h2>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>DAYS</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>HOURS</small>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>MINUTES</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>SECONDS</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="section about reveal">
+
+        <div class="about-image">
+            <img src="images/birthday.jpg" alt="Birthday Celebration">
+        </div>
+
+        <div class="about-content">
+
+            <p class="section-label">
+                A SPECIAL DAY
+            </p>
+
+            <h2>
+                Another Year,<br>
+                Another Beautiful Chapter
+            </h2>
+
+            <p>
+                Birthdays are more than just a date on the calendar.
+                They are a celebration of memories, friendships,
+                laughter and all the beautiful moments that make life special.
+            </p>
+
+            <p>
+                Join me as I celebrate another wonderful year surrounded
+                by the people who make every moment unforgettable.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+    <section class="section gallery-section reveal">
+
+        <p class="section-label">
+            MEMORIES
+        </p>
+
+        <h2>
+            A Few Moments
+        </h2>
+
+        <div class="gallery">
+
+            <div class="gallery-item large">
+                <img src="images/memory1.jpg" alt="Memory 1">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/memory2.jpg" alt="Memory 2">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/memory3.jpg" alt="Memory 3">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DETAILS -->
+    <section class="section details reveal">
+
+        <p class="section-label">
+            SAVE THE DATE
+        </p>
+
+        <h2>
+            Celebration Details
+        </h2>
+
+        <div class="details-grid">
+
+            <div class="detail-card">
+
+                <span class="detail-icon">
+                    ✦
+                </span>
+
+                <h3>
+                    DATE
+                </h3>
+
+                <p>
+                    Sunday<br>
+                    20 December 2026
+                </p>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span class="detail-icon">
+                    ✦
+                </span>
+
+                <h3>
+                    TIME
+                </h3>
+
+                <p>
+                    6:00 PM<br>
+                    onwards
+                </p>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span class="detail-icon">
+                    ✦
+                </span>
+
+                <h3>
+                    VENUE
+                </h3>
+
+                <p>
+                    The Grand Ballroom<br>
+                    Colombo
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=The+Grand+Ballroom+Colombo"
+            target="_blank"
+            class="map-btn"
+        >
+            VIEW LOCATION →
+        </a>
+
+    </section>
+
+
+    <!-- RSVP -->
+    <section class="rsvp reveal">
+
+        <div class="rsvp-content">
+
+            <p class="section-label">
+                LET ME KNOW
+            </p>
+
+            <h2>
+                Will You Be There?
+            </h2>
+
+            <p>
+                Your presence would make this celebration even more special.
+            </p>
+
+            <a
+                href="https://wa.me/94742848081?text=Hi%20Amelia!%20I%20would%20love%20to%20join%20your%20birthday%20celebration."
+                target="_blank"
+                class="rsvp-btn"
+            >
+                RSVP ON WHATSAPP
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>
+            Amelia
+        </h3>
+
+        <p>
+            20 • 12 • 2026
+        </p>
+
+        <span>
+            Invitation.com
+        </span>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        /* OPEN INVITATION */
+
+        function openInvitation() {
+
+            const opening = document.getElementById("openingScreen");
+
+            if (!opening) return;
+
+            opening.classList.add("hide");
+
+            setTimeout(function () {
+                opening.style.display = "none";
+            }, 1200);
+
+        }
+
+
+        /* MUSIC */
+
+        const music = document.getElementById("bgMusic");
+        const musicButton = document.getElementById("musicButton");
+
+        let isPlaying = false;
+
+
+        function toggleMusic() {
+
+            if (!isPlaying) {
+
+                music.play()
+                    .then(function () {
+
+                        isPlaying = true;
+                        musicButton.classList.add("playing");
+                        musicButton.innerHTML = "❚❚";
+
+                    })
+                    .catch(function () {
+
+                        console.log("Music could not be played.");
+
+                    });
+
+            } else {
+
+                music.pause();
+
+                isPlaying = false;
+                musicButton.classList.remove("playing");
+                musicButton.innerHTML = "♪";
+
+            }
+
+        }
+
+
+        /* COUNTDOWN */
+
+        const eventDate =
+            new Date("December 20, 2026 18:00:00").getTime();
+
+
+        function updateCountdown() {
+
+            const now = new Date().getTime();
+
+            const distance = eventDate - now;
+
+
+            if (distance < 0) {
+
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+
+                return;
+
+            }
+
+
+            const days =
+                Math.floor(distance / (1000 * 60 * 60 * 24));
+
+            const hours =
+                Math.floor(
+                    (distance % (1000 * 60 * 60 * 24))
+                    / (1000 * 60 * 60)
+                );
+
+            const minutes =
+                Math.floor(
+                    (distance % (1000 * 60 * 60))
+                    / (1000 * 60)
+                );
+
+            const seconds =
+                Math.floor(
+                    (distance % (1000 * 60))
+                    / 1000
+                );
+
+
+            document.getElementById("days").innerHTML =
+                String(days).padStart(2, "0");
+
+            document.getElementById("hours").innerHTML =
+                String(hours).padStart(2, "0");
+
+            document.getElementById("minutes").innerHTML =
+                String(minutes).padStart(2, "0");
+
+            document.getElementById("seconds").innerHTML =
+                String(seconds).padStart(2, "0");
+
+        }
+
+
+        updateCountdown();
+
+        setInterval(updateCountdown, 1000);
+
+
+        /* SCROLL REVEAL */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                function (entries) {
+
+                    entries.forEach(function (entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("show");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.15
+                }
+
+            );
+
+
+        revealElements.forEach(function (element) {
+
+            observer.observe(element);
+
+        });
+
+    </script>
+
+</body>
+</html>
